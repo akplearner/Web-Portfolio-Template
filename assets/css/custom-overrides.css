@@ -1,0 +1,37 @@
+/* Modern overrides for the Anthony portfolio */
+:root{--accent:#ff416c;--accent2:#ff4b2b;--bg:#0b1220;--muted:rgba(230,238,248,0.6)}
+html,body{height:100%}
+body{background:var(--bg);color:#e6eef8;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+.header{padding:6rem 0 5rem;text-align:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;background-size:400% 400%;animation:gd 8s ease infinite}
+@keyframes gd{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.header-content{max-width:860px;margin:0 auto}
+.header-subtitle{color:rgba(255,255,255,.95);font-weight:600;margin-bottom:.5rem}
+.header-title{font-size:3.5rem;letter-spacing:.6px;margin:0 0 .25rem;color:#fff}
+.header-mono{color:rgba(255,255,255,.95);font-size:1rem}
+.btn-light{border:1px solid rgba(255,255,255,.08);background:transparent;color:#fff}
+.btn-light:hover{background:rgba(255,255,255,.06)}
+
+.navbar{transition:all .25s ease;background:transparent}
+.navbar-scrolled{background:rgba(11,18,32,0.65)!important;backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(2,6,23,0.45)}
+
+.card, .price-card, .contact-form-card, .contact-info-card{transition:transform .45s cubic-bezier(.2,.9,.2,1),opacity .45s;transform:translateY(18px) scale(.995);opacity:0}
+.in-view{transform:none;opacity:1}
+
+.portfolio-item{overflow:hidden;border-radius:8px;transition:transform .35s ease,box-shadow .35s ease}
+.portfolio-item:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(3,9,23,0.6)}
+
+.price-card-cost .num{font-weight:700;color:var(--accent)}
+
+@media (max-width:767px){.header-title{font-size:2.25rem}.header{padding:4rem 0}}
+
+input.form-control:focus, textarea.form-control:focus{box-shadow:0 6px 20px rgba(0,0,0,0.35);border-color:rgba(255,255,255,0.12)}
+.typed{display:inline-block;color:#fff;font-weight:700}
+
+/* Reveal utility */
+.reveal-up{transform:translateY(18px);opacity:0;transition:transform .6s ease,opacity .6s}
+.reveal-up.in-view{transform:none;opacity:1}
+
+/* small helper for hero CTA alignment */
+.header .btn{margin-top:1rem}
+
+/* end overrides */
